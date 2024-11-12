@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?><sqlb_project><db path="C:/Users/Toryr/Code/SavvyCoders/dap-curriculum/Section07/Resources/SavvyCoders_SQL_chargeDB.db" readonly="0" foreign_keys="1" case_sensitive_like="0" temp_store="0" wal_autocheckpoint="1000" synchronous="2"/><attached/><window><main_tabs open="structure browser pragmas query" current="3"/></window><tab_structure><column_width id="0" width="300"/><column_width id="1" width="0"/><column_width id="2" width="100"/><column_width id="3" width="2957"/><column_width id="4" width="0"/><expanded_item id="0" parent="1"/><expanded_item id="1" parent="1"/><expanded_item id="2" parent="1"/><expanded_item id="3" parent="1"/></tab_structure><tab_browse><table title="factCharge" custom_title="0" dock_id="6" table="4,10:mainfactCharge"/><dock_state state="000000ff00000000fd0000000100000002000004d4000003c2fc0100000006fb000000160064006f0063006b00420072006f007700730065003101000000000000047f0000000000000000fb000000160064006f0063006b00420072006f00770073006500320100000000ffffffff0000000000000000fb000000160064006f0063006b00420072006f00770073006500330100000000ffffffff0000000000000000fb000000160064006f0063006b00420072006f00770073006500340100000000ffffffff0000000000000000fb000000160064006f0063006b00420072006f00770073006500350100000000000004ed0000000000000000fb000000160064006f0063006b00420072006f00770073006500360100000000000004d40000011100ffffff000002a80000000000000004000000040000000800000008fc00000000"/><default_encoding codec=""/><browse_table_settings><table schema="main" name="EVCharging" show_row_id="0" encoding="" plot_x_axis="" unlock_view_pk="_rowid_" freeze_columns="0"><sort/><column_widths><column index="1" value="70"/><column index="2" value="69"/><column index="3" value="56"/><column index="4" value="156"/><column index="5" value="156"/><column index="6" value="71"/><column index="7" value="67"/><column index="8" value="104"/><column index="9" value="112"/><column index="10" value="67"/><column index="11" value="67"/><column index="12" value="85"/><column index="13" value="70"/><column index="14" value="68"/><column index="15" value="74"/><column index="16" value="81"/></column_widths><filter_values/><conditional_formats/><row_id_formats/><display_formats/><hidden_columns/><plot_y_axes/><global_filter/></table><table schema="main" name="SavvyCoders_SQL_evRegistry" show_row_id="0" encoding="" plot_x_axis="" unlock_view_pk="_rowid_" freeze_columns="0"><sort/><column_widths><column index="1" value="85"/><column index="2" value="163"/><column index="3" value="140"/><column index="4" value="47"/><column index="5" value="85"/><column index="6" value="82"/><column index="7" value="109"/><column index="8" value="117"/><column index="9" value="300"/><column index="10" value="98"/><column index="11" value="81"/><column index="12" value="60"/></column_widths><filter_values/><conditional_formats/><row_id_formats/><display_formats/><hidden_columns/><plot_y_axes/><global_filter/></table><table schema="main" name="dimDay" show_row_id="0" encoding="" plot_x_axis="" unlock_view_pk="_rowid_" freeze_columns="0"><sort/><column_widths><column index="1" value="63"/><column index="2" value="84"/><column index="3" value="66"/></column_widths><filter_values/><conditional_formats/><row_id_formats/><display_formats/><hidden_columns/><plot_y_axes/><global_filter/></table><table schema="main" name="dimFacility" show_row_id="0" encoding="" plot_x_axis="" unlock_view_pk="_rowid_" freeze_columns="0"><sort/><column_widths><column index="1" value="78"/><column index="2" value="195"/></column_widths><filter_values/><conditional_formats/><row_id_formats/><display_formats/><hidden_columns/><plot_y_axes/><global_filter/></table><table schema="main" name="dimUser" show_row_id="0" encoding="" plot_x_axis="" unlock_view_pk="_rowid_" freeze_columns="0"><sort/><column_widths><column index="1" value="70"/><column index="2" value="88"/><column index="4" value="85"/></column_widths><filter_values/><conditional_formats/><row_id_formats/><display_formats/><hidden_columns/><plot_y_axes/><global_filter/></table><table schema="main" name="factCharge" show_row_id="0" encoding="" plot_x_axis="" unlock_view_pk="_rowid_" freeze_columns="0"><sort/><column_widths><column index="1" value="72"/><column index="2" value="70"/><column index="3" value="71"/><column index="4" value="53"/><column index="5" value="156"/><column index="6" value="156"/><column index="7" value="85"/><column index="8" value="81"/><column index="9" value="104"/><column index="10" value="69"/><column index="11" value="96"/><column index="12" value="70"/><column index="13" value="76"/></column_widths><filter_values/><conditional_formats/><row_id_formats/><display_formats/><hidden_columns/><plot_y_axes/><global_filter/></table></browse_table_settings></tab_browse><tab_sql><sql name="7.1 Q1*">SELECT
+	&quot;Model Year&quot;,
+	Make,
+	Model
+FROM SavvyCoders_SQL_evRegistry</sql><sql name="7.1 Q2*">SELECT
+	DISTINCT &quot;Electric Vehicle Type&quot; as ElectricVehicleType
+FROM SavvyCoders_SQL_evRegistry</sql><sql name="7.1 Q3*">SELECT *
+FROM SavvyCoders_SQL_evRegistry</sql><sql name="7.1 Q4*">SELECT
+	Make,
+	Model,
+	&quot;Base MSRP&quot;
+FROM SavvyCoders_SQL_evRegistry
+WHERE &quot;Base MSRP&quot; BETWEEN 20000 AND 35000</sql><sql name="7.2 Q1*">SELECT *
+FROM SavvyCoders_SQL_evRegistry
+WHERE City IS NULL</sql><sql name="7.2 Q2*">SELECT
+	Make,
+	Model,
+	&quot;Electric Vehicle Type&quot;
+FROM SavvyCoders_SQL_evRegistry
+WHERE VIN like &quot;%3E1EA1J&quot;</sql><sql name="7.2 Q3*">SELECT
+	&quot;Model Year&quot;,
+	Make,
+	Model,
+	&quot;Electric Vehicle Type&quot;,
+	&quot;Electric Range&quot;
+FROM SavvyCoders_SQL_evRegistry
+WHERE Make like &quot;CHEVROLET&quot; or &quot;TESLA&quot;
+ORDER BY &quot;Model Year&quot; DESC</sql><sql name="7.2 Q4*">SELECT
+	stationId,
+	count(stationId) as timesUsed
+FROM EVCharging
+GROUP BY stationId
+ORDER BY timesUsed DESC
+LIMIT 5</sql><sql name="7.2 Q5*">SELECT
+	userId,
+	min(chargeTimeHrs) as minTime,
+	max(chargeTimeHrs) as maxTime
+FROM EVCharging
+GROUP BY userId
+ORDER BY minTime, maxTime</sql><sql name="7.3 Q1*">SELECT
+	weekday,
+	round(avg(chargeTimeHrs),2) as averageChargeTime
+FROM EVCharging
+GROUP BY weekday</sql><sql name="7.3 Q2*">SELECT
+	userId,
+	round(sum(kwhTotal), 2) as totalPower
+FROM EVCharging
+GROUP BY userId
+ORDER BY totalPower DESC
+LIMIT 15</sql><sql name="7.3 Q3*">SELECT
+	typeFacility,
+	count(stationId) as numStation
+FROM factCharge
+INNER JOIN dimFacility
+ON FacilityKey = facilityID
+GROUP BY typeFacility
+ORDER BY numStation DESC</sql><sql name="7.3 Q5*">SELECT
+	userId,
+	min(chargeTimeHrs) as minTime,
+	max(chargeTimeHrs) as maxTime
+FROM EVCharging
+GROUP BY userId
+HAVING sum(chargeTimeHrs) &gt; 1
+ORDER BY minTime, maxTime</sql><current_tab id="9"/></tab_sql></sqlb_project>
